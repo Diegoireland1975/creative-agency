@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* Base Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.icon {
+  width: 1rem;
+}
+/* Header */
+h1 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 15;
+}
+
+.main-nav.active {
+  left: 0;
+}
+
+.main-nav li {
+  text-align: center;
+}
+
+.main-nav a {
+  font-size: 2.2rem;
+  color: #111;
+  font-weight: 300;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.main-nav .social-bar {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 60px;
+}
+
+.social-bar li {
+  margin-bottom: 1rem;
+}
+
+.social-bar .icon:hover {
+  color: var(--primary-color);
+}
+.main-nav .email {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+#logo {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  z-index: 20;
+}
+
+/* Toggle */
+.toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  background: var(--primary-color) url(../img/menu.png) no-repeat center
+    center/cover;
+  z-index: 20;
+  background-size: 2rem;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: var(--primary-color) url(../img/close.png) no-repeat center
+    center/cover;
+  background-size: 1.5rem;
+}
+.home-img {
+  display: none;
+}
+
+/* section Home */
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.home-content {
+  max-width: 600px;
+  z-index: 10;
+}
+
+p {
+  font-size: 1.1rem;
+}
+@media (min-width: 768px) {
+  #logo {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 40%;
+  }
+}
