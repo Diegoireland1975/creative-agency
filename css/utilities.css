@@ -1,5 +1,6 @@
 :root {
   --primary-color: #f60f20;
+  --secondary-color: #1b206e;
 }
 
 .flex {
@@ -9,6 +10,12 @@
   align-items: center;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+}
 .container {
   max-width: 1200px;
   padding: 2rem 1rem;

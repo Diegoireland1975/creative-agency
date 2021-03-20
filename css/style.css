@@ -21,8 +21,8 @@ img {
   display: block;
   width: 100%;
 }
-.social-bar a {
-  width: 1rem;
+.social {
+  width: 10rem;
 }
 /* Header */
 h1 {
@@ -133,12 +133,36 @@ p {
 }
 
 /* Services */
-.services {
-  padding: 0 16rem;
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 3rem;
+  gap: 4rem;
 }
-.services .icon {
-  width: 5rem;
+
+.services .service {
+  padding: 2rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s ease;
 }
+
+.services .service h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.services-content img {
+  max-width: 100px;
+  padding-bottom: 2rem;
+}
+
 @media (min-width: 768px) {
   #logo {
     font-size: 2rem;
@@ -147,9 +171,15 @@ p {
   .flex {
     flex-direction: row;
   }
-
   .services {
     padding: 0 3rem;
+  }
+
+  .services-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-content img {
+    max-width: 60px;
   }
 }
 
@@ -160,5 +190,9 @@ p {
     bottom: 0;
     right: 0;
     max-width: 40%;
+  }
+
+  .services-content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
