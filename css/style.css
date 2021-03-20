@@ -21,7 +21,7 @@ img {
   display: block;
   width: 100%;
 }
-.icon {
+.social-bar a {
   width: 1rem;
 }
 /* Header */
@@ -87,7 +87,7 @@ h1 {
 #logo {
   position: absolute;
   top: 30px;
-  left: 50px;
+  left: 70px;
   font-weight: 700;
   font-size: 1.5rem;
   z-index: 20;
@@ -121,6 +121,7 @@ h1 {
   display: flex;
   align-items: center;
   height: 100vh;
+  padding: 0 3rem;
 }
 .home-content {
   max-width: 600px;
@@ -130,6 +131,14 @@ h1 {
 p {
   font-size: 1.1rem;
 }
+
+/* Services */
+.services {
+  padding: 0 16rem;
+}
+.services .icon {
+  width: 5rem;
+}
 @media (min-width: 768px) {
   #logo {
     font-size: 2rem;
@@ -137,6 +146,10 @@ p {
 
   .flex {
     flex-direction: row;
+  }
+
+  .services {
+    padding: 0 3rem;
   }
 }
 
