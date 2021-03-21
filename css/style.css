@@ -21,9 +21,7 @@ img {
   display: block;
   width: 100%;
 }
-.social {
-  width: 10rem;
-}
+
 /* Header */
 h1 {
   font-weight: 500;
@@ -79,6 +77,9 @@ h1 {
 .social-bar .icon:hover {
   color: var(--primary-color);
 }
+.social-bar .social {
+  width: 1rem;
+}
 .main-nav .email {
   position: absolute;
   bottom: 1.5rem;
@@ -87,7 +88,7 @@ h1 {
 #logo {
   position: absolute;
   top: 30px;
-  left: 70px;
+  left: 40px;
   font-weight: 700;
   font-size: 1.5rem;
   z-index: 20;
@@ -121,7 +122,7 @@ h1 {
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 .home-content {
   max-width: 600px;
@@ -133,6 +134,9 @@ p {
 }
 
 /* Services */
+.title {
+  max-width: 900px;
+}
 .services-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -163,15 +167,72 @@ p {
   padding-bottom: 2rem;
 }
 
+/* Work */
+.portfolio {
+  /* display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio .item {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 1rem;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.portfolio .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio .item:hover .action {
+  opacity: 1;
+}
+
+.portfolio .item a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+}
+
+/* Contact */
+.contact-form {
+  background: #f4f4f4;
+}
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
 @media (min-width: 768px) {
   #logo {
     font-size: 2rem;
+    position: absolute;
+    top: 30px;
+    left: 80px;
   }
 
-  .flex {
-    flex-direction: row;
+  .home {
+    padding: 0 4rem;
   }
-  .services {
+  .services,
+  .work,
+  .contact {
     padding: 0 3rem;
   }
 
