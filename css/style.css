@@ -211,13 +211,72 @@ p {
 }
 
 /* Contact */
-.contact-form {
-  background: #f4f4f4;
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-form input {
+.contact-form {
+  background: #f9f9f9;
+  padding: 3.75rem 2.5rem 1.25rem;
+  width: 100%;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+form input,
+form textarea {
   width: 100%;
   padding: 0.5rem;
   margin: 1rem 0;
+  color: #111;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 300;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  resize: none;
+}
+.contact-form .row input[type="submit"] {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+}
+form .row textarea {
+  height: 9.375rem;
+}
+.info-box .contact-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 3.75rem 2.5rem 1.25rem;
+}
+.contact-info .info-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-info .info-box .details {
+  margin-bottom: 3rem;
+}
+.info-box h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.info-box a {
+  color: #111;
 }
 @media (min-width: 768px) {
   #logo {
@@ -255,5 +314,26 @@ form input {
 
   .services-content {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  #contact {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .contact-form .row {
+    width: 100%;
+    display: flex;
+  }
+
+  .contact-form .input50 {
+    width: 50%;
+    margin: 0 0.5rem;
+  }
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0 0.5rem;
   }
 }
