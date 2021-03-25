@@ -33,12 +33,13 @@ h1 {
   left: 100%;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   z-index: 15;
+  transition: all 0.5s ease;
 }
 
 .main-nav.active {
@@ -56,7 +57,7 @@ h1 {
 }
 
 .main-nav a:hover {
-  color: var(--primary-color);
+  color: #fff;
 }
 
 .main-nav .social-bar {
@@ -74,11 +75,12 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.social-bar .icon:hover {
-  color: var(--primary-color);
-}
 .main-nav .social-bar img {
   width: 1rem;
+  transition: transform 0.3s ease;
+}
+.main-nav .social-bar img:hover {
+  transform: scale(1.1);
 }
 .main-nav .email {
   position: absolute;
@@ -197,11 +199,11 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .portfolio .item:hover .action {
   opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .portfolio .item a {
@@ -258,7 +260,7 @@ form .row textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: #f9f9f9;
   padding: 1.875rem 1.875rem 1.25rem;
   margin-top: 1.25rem;
@@ -278,6 +280,7 @@ form .row textarea {
 
 .info-box a {
   color: #111;
+  display: block;
 }
 @media (min-width: 768px) {
   #logo {
