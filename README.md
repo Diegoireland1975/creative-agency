@@ -1,5 +1,4 @@
 # creative-agency
-Fictional Creative Agency
 This project is about a Fictional Agency 
 I used the Grid for the Service page and Flexbox for the Work Page.
 In the work Page, I applied a position absolute to the link inside each item to positioning each link inside the
